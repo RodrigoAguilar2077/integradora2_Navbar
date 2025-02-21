@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}AutoPett UTT{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</head>
+<body>
+    <nav>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <ul id="navbar">
+            <li class="logo"><a href="/"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo"></a></li>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/caracteristicas">Características</a></li>
+            <li><a href="/galeria">Galería</a></li>
+            <li><a href="/compra">Compra</a></li>
+            <li><a href="/contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    <div>
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
